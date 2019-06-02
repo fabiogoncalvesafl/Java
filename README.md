@@ -1,6 +1,6 @@
 # Java
 
-<bold>Layout apropriado para projetos Java<bold>
+<bold>Layout apropriado para projetos Java</bold>
 - Window / Perspective / Open Perspective / Other / Selecione Java
 - Window / Show View / Console
 
