@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 # Java - Dicas e Orientações
 
 Layout apropriado para projetos Java
-=======
-# Java
-
-<bold>Layout apropriado para projetos Java</bold>
->>>>>>> ee69ae4dd93f8229c55275916cf9b3bcc3ed4251
 - Window / Perspective / Open Perspective / Other / Selecione Java
 - Window / Show View / Console
 
@@ -39,14 +33,6 @@ Ctrl + Shift + o
 Criar um projeto Java
 - File / New / Java Project
 
-<<<<<<< HEAD
-=======
-Padronização de Nome
-
-Pacote = inicia com minúscula = course
-Classe = Pascal Case = Program
-
->>>>>>> ee69ae4dd93f8229c55275916cf9b3bcc3ed4251
 Entry Point = Ponto de Entrada = public static void main(String[] args){}
 
 Tipos Primitivos
@@ -202,7 +188,6 @@ comando 3
 
 Funções interessantes para String
 
-<<<<<<< HEAD
 • Formatar: toLowerCase(), toUpperCase(), trim()
 • Recortar: substring(inicio), substring(inicio, fim)
 • Substituir: Replace(char, char), Replace(string, string)
@@ -298,11 +283,3 @@ while ( condição ) {
 comando 1
 comando 2
 }
-
-=======
-• Formatar: toLowerCase(), toUpperCase(), trim() <br/>
-• Recortar: substring(inicio), substring(inicio, fim) <br/>
-• Substituir: Replace(char, char), Replace(string, string) <br/>
-• Buscar: IndexOf, LastIndexOf <br/>
-• str.Split(" ") <br/>
->>>>>>> ee69ae4dd93f8229c55275916cf9b3bcc3ed4251
