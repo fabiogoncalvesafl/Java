@@ -283,3 +283,13 @@ while ( condição ) {
 comando 1
 comando 2
 }
+
+Estrutura repetitiva for ("para")
+    
+for ( início ; condição ; incremento) {
+comando 1
+comando 2
+}
+
+Reflexão: você vai dar preferência para estrutura for quando souber previamento a quantidade de repetições
+
