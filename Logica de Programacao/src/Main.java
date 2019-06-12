@@ -3,7 +3,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Olá Mundo!");
+		//Estrutura para envio do codigo para validação no URI.
 	}
 
 }

@@ -1,8 +1,15 @@
-# Java - Dicas e Orientações
+# Java - Dicas e Orientaçõe
 
 Layout apropriado para projetos Java
 - Window / Perspective / Open Perspective / Other / Selecione Java
 - Window / Show View / Console
+
+Zerar o layout no Eclipse
+- Window -> Perspective -> Reset Perspective
+
+Mudar o tamanho da fonte no Eclipse
+• CTRL +
+• CTRL -
 
 Dicas de alto completar o código Java no Eclipse
 
@@ -125,6 +132,10 @@ public static void main(String[] args){
 Resposta no console
 10.36
 
+Para ler um texto ATÉ A QUEBRA DE LINHA
+
+s1 = sc.nextLine();
+
 Limpeza de stream de entrada (flush)
 
 Antes de fazer um nextLine()
@@ -134,6 +145,15 @@ fica pendente na stream
 
 int n1 = sc.nextInt();
 sc.nextLine();
+
+Algumas funções matemáticas em Java
+
+• sqrt – raiz quadrada
+A = Math.sqrt(x); => Variável A recebe a raiz quadrada de x
+• pow – potenciação
+A = Math.pow(x, y); => Variável A recebe o resultado de x elevado a y
+• abs – valor absoluto
+A = Math.abs(x); => Variável A recebe o valor absoluto de x
 
 Operadores Lógicos
 
@@ -154,6 +174,14 @@ Geralmente é um micro controlador, programação com interface de rede e arduin
 & => Operação "E" bit a bit
 | => Operação "OU" bit a bit
 ^ => Operação "OU-exclusivo" bit a bit
+
+Operadores de Atribuição Cumulativa
+
+a += b;  => a = a + b;
+a -= b; => a = a - b;
+a *= b; => a = a * b;
+a /= b; => a = a / b;
+a %= b; => a = a % b;
 
 Estruturas Condicionais
 
@@ -291,5 +319,4 @@ comando 1
 comando 2
 }
 
-Reflexão: você vai dar preferência para estrutura for quando souber previamento a quantidade de repetições
-
+Reflexão: você vai dar preferência para estrutura for quando souber previamente a quantidade de repetições
