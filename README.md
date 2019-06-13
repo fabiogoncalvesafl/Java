@@ -1,4 +1,4 @@
-# Java - Dicas e Orientaçõe
+# Java - Dicas e Orientações
 
 Layout apropriado para projetos Java
 - Window / Perspective / Open Perspective / Other / Selecione Java
