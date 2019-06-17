@@ -177,6 +177,7 @@ Geralmente é um micro controlador, programação com interface de rede e arduin
 
 Operadores de Atribuição Cumulativa
 
+
 a += b;  => a = a + b;
 a -= b; => a = a - b;
 a *= b; => a = a * b;
@@ -188,12 +189,18 @@ Estruturas Condicionais
 if-else (se-senão)
 
 - Simples
+REGRA:
+V: executa o bloco de comandos
+F: pula o bloco de comandos
   
 if (condição){
     comando 
 }
 
 - Composta
+REGRA:
+V: executa somente o bloco do if
+F: executa somente o bloco do else
 
 if (condição){
     comando 1
@@ -301,6 +308,9 @@ F7 - sair do método em execução
 • Aba importante: Variables
 
 Estrutura repetitiva while
+
+É uma estrutura de controle que repete um bloco de comandos enquanto uma condição for verdadeira.
+Quando usar: quando não se sabe previamente a quantidade de repetições que será realizada.
 
 Estrutura "enquanto"
 Regra: 
