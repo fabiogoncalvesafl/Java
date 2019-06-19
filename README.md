@@ -323,10 +323,29 @@ comando 2
 }
 
 Estrutura repetitiva for ("para")
+
+É uma estrutura de controle que repete um bloco de comandos para um certo intervalo de valores.
+Quando usar: quando se sabe previamente a quantidade de repetições, ou o intervalo de valores.
     
 for ( início ; condição ; incremento) {
 comando 1
 comando 2
 }
 
-Reflexão: você vai dar preferência para estrutura for quando souber previamente a quantidade de repetições
+Estrutura repetitiva "faça-enquanto"
+
+Menos utilizada, mas em alguns casos se encaixa melhor ao problema.
+O bloco de comandos executa pelo menos uma vez, pois a condição é verificada no final.
+
+Regra:
+V: volta
+F: pula fora
+
+Sintaxe / regra
+
+do {
+comando 1
+comando 2
+} while ( condição );
+
+
