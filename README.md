@@ -30,7 +30,7 @@ Executar o Programa
 - CTRL + F11
 
 Retornar um espaço do código
-- Selecione o trecho do códico que quer retornar e pressione
+- Selecione o trecho do código que quer retornar e pressione
 - SHIFT + Tab
 
 Importar bibliotecas no projeto sem ter sido declarado 
@@ -348,4 +348,24 @@ comando 1
 comando 2
 } while ( condição );
 
+Vetores
 
+Um vetor corresponde a uma coleção de dados de tamanho fixo, indexada, unidimensional e homogênea
+
+• Indexada: os elementos são acessados por meio de índices
+• Unidimensional: uma dimensão
+• Homogênea: todos dados são do mesmo tipo
+
+Vetores são também chamados de arranjos unidimensionais ( em inglês arranjos é array)
+
+Em Java a primeira posição e um vetor é a posição 0
+Um arranjo deve ser alocado previamente, antes de ser utilizado.
+Uma vez alocado, sua quantidade de elementos é fixa.
+
+• Declaração: double[] B;
+• Instanciação: B = new double[5];
+• Acesso: B[3] = 20;
+
+Exemplo de declaração e instanciação na mesma linha:
+
+double[] b = new double[5];
