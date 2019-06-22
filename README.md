@@ -369,3 +369,38 @@ Uma vez alocado, sua quantidade de elementos é fixa.
 Exemplo de declaração e instanciação na mesma linha:
 
 double[] b = new double[5];
+
+
+Regra de 3 (como montar)
+
+int n = sc.nextInt();
+int[] idades = new int[n];
+
+for (int i = 0; i < n; i++) {
+     idades[i] = sc.nextInt();
+}
+
+int cont = 0;
+for (int i = 0; i < n; i++) {
+    if (idades[i] < 16) {
+        cont = cont + 1;
+    }
+}
+
+double x = (double) cont * 100 / n;
+
+Sintaxe opcional: "para cada"
+
+int N = sc.nextInt();
+String[] nomes = new String[N];
+
+for (int i=0; i<N; i++) {
+     nomes[i] = sc.next();
+}
+System.out.println("Nomes lidos:");
+
+for (String s : nomes) {
+     System.out.println(s);
+}
+
+
