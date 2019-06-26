@@ -403,4 +403,84 @@ for (String s : nomes) {
      System.out.println(s);
 }
 
+Matrizes
 
+Uma matriz corresponde a uma coleção de dados de tamanho fixo, indexada, bidimensional e homogênea
+
+• Indexada: os elementos são acessados por meio de índices
+• bidimensional: duas dimensões
+• Homogênea: todos dados são do mesmo tipo
+
+Matrizes são também chamadas de arranjos bidimensionais
+
+Em Java a primeira posição de uma matriz é a posição 0, 0 (linha 0, coluna 0)
+Um arranjo deve ser alocado previamente, antes de ser utilizado. Uma vez alocado, sua quantidade de elementos é fixa
+
+Como criar uma matriz?
+
+declaração => double[][] A;
+instanciação => A = new double[3][4];
+
+Exemplo de declaração e instanciação na mesma linha:
+
+double[][] A = new double[3][4];
+
+Como acessar os elementos de uma matriz?
+
+A[1][2] = 10;
+
+Programação Orientada a Objetos com Java
+﻿Classes, atributos, métodos, membros estáticos
+
+Classe
+
+• É um tipo estruturado que pode conter (membros):
+     • Atributos (dados / campos)
+     • Métodos (funções / operações)
+
+• A classe também pode prover muitos outros recursos, tais como:
+     • Construtores
+     • Sobrecarga
+     • Encapsulamento
+     • Herança
+     • Polimorfismo
+
+• Exemplos:
+     • Entidades: Produto, Cliente, Triangulo
+     • Serviços: ProdutoService, ClienteService, EmailService, StorageService
+     • Controladores: ProdutoController, ClienteController
+     • Utilitários: Calculadora, Compactador
+     • Outros (views, repositórios, gerenciadores, etc.)
+
+Classes, objetos, atributos
+
+• Classe: é a definição do tipo
+• Objetos: são instâncias da classe
+
+package course; => Pacote da Classe
+
+public class Triangle { => Nome da Classe
+    
+     public double a; => Atributos da Classe
+     public double b; => Atributos da Classe
+     public double c; => Atributos da Classe
+    
+     // Metodo
+     // public => O prefixo "public" indica que o atributo ou método pode ser usado em outros arquivos    
+    // double => Tipo do dado que o método retorna (se o método não retorna nada, usa-se a palavra "void")
+    // area => Nome do método
+    // () => Lista de parâmetros do método
+     public double area() {  
+         double p = (a + b + c) / 2.0;                                   
+         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+     }
+}
+
+Discussão
+Quais são os benefícios de se calcular a área de um triângulo por meio de um
+MÉTODO dentro da CLASSE Triangle?
+1) Reaproveitamento de código: nós eliminamos o código repetido (cálculo
+das áreas dos triângulos x e y) no programa principal.
+2) Delegação de responsabilidades: quem deve ser responsável por saber
+como calcular a área de um triângulo é o próprio triângulo. A lógica do cálculo
+da área não deve estar em outro lugar.
