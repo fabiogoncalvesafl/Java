@@ -7,6 +7,9 @@ Layout apropriado para projetos Java
 Zerar o layout no Eclipse
 - Window -> Perspective -> Reset Perspective
 
+Alterar Tema para Dark
+- Window -> Preferences -> General -> Appearance -> Theme: selecione Dark
+
 Mudar o tamanho da fonte no Eclipse
 • CTRL +
 • CTRL -
@@ -15,15 +18,15 @@ Dicas de alto completar o código Java no Eclipse
 
 sysout Ctrl + Barra de espaço = System.out.println();
 
-Dica de auto completar comandos e variaveis
+Dica de auto completar comandos e variáveis
 
-Após digitar algum comando ou variavel basta presionar
+Após digitar algum comando ou variável basta pressionar
 
 Crtl + Barra de Espaço
 
-que vai completar o comando ou variavel
+que vai completar o comando ou variável
 
-Identação automática do código
+Edentação automática do código
 - CTRL + SHIFT + F
 
 Executar o Programa
@@ -82,6 +85,11 @@ Camel Case: lastName
 
 Pascal Case: ProductService
 - classes
+
+Constantes: 
+- Nomes em Maiúsculo e se for composto deverá ser separado com _ 
+- Constantes (PI) ou (NET_SALARY)
+- Declaração: public static final double PI = 3.14159; => onde o final indica que é uma constante.
 
 String e Object
 - String: Uma cadeia de caracteres Unicode IMUTÁVEL (segurança, simplicidade, thread safe)
@@ -430,7 +438,8 @@ Como acessar os elementos de uma matriz?
 A[1][2] = 10;
 
 Programação Orientada a Objetos com Java
-﻿Classes, atributos, métodos, membros estáticos
+Classes, atributos, métodos, membros estáticos
+
 
 Classe
 
@@ -477,10 +486,28 @@ public class Triangle { => Nome da Classe
 }
 
 Discussão
-Quais são os benefícios de se calcular a área de um triângulo por meio de um
-MÉTODO dentro da CLASSE Triangle?
-1) Reaproveitamento de código: nós eliminamos o código repetido (cálculo
-das áreas dos triângulos x e y) no programa principal.
-2) Delegação de responsabilidades: quem deve ser responsável por saber
-como calcular a área de um triângulo é o próprio triângulo. A lógica do cálculo
-da área não deve estar em outro lugar.
+
+Quais são os benefícios de se calcular a área de um triângulo por meio de um MÉTODO dentro da CLASSE Triangle?
+
+1) Reaproveitamento de código: nós eliminamos o código repetido (cálculo das áreas dos triângulos x e y) no programa principal.
+2) Delegação de responsabilidades: quem deve ser responsável por saber como calcular a área de um triângulo é o próprio triângulo.
+   A lógica do cálculo da área não deve estar em outro lugar.
+
+Membros estáticos
+
+membros = atributos e métodos
+
+• Também chamados membros de classe
+     • Em oposição a membros e instância
+
+• São membros que fazem sentido independentemente de objetos.
+     Não precisam de objeto para serem chamados.
+     São chamados a partir do próprio nome da classe.
+
+• Aplicações comuns:
+     • Classes utilitárias => Math.sqrt(double)
+     • Declaração de constantes 
+
+• Uma classe que possui somente membros estáticos, pode ser uma classe estática também.
+     Esta classe não poderá ser instanciada.
+
