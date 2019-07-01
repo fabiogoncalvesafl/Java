@@ -237,6 +237,9 @@ Funções interessantes para String
 • Buscar: IndexOf, LastIndexOf
 • str.Split(" ")
 
+Manipular char
+char caracter = sc.next().charAt(0);
+
 Operação split
 
 String s = "potato apple lemon";
@@ -438,8 +441,7 @@ Como acessar os elementos de uma matriz?
 A[1][2] = 10;
 
 Programação Orientada a Objetos com Java
-Classes, atributos, métodos, membros estáticos
-
+﻿Classes, atributos, métodos, membros estáticos
 
 Classe
 
@@ -485,13 +487,15 @@ public class Triangle { => Nome da Classe
      }
 }
 
+Observação: Quando os membros da classe não são estáticos, você é obrigado a instancia-los para poder utiliza-la.
+
 Discussão
 
 Quais são os benefícios de se calcular a área de um triângulo por meio de um MÉTODO dentro da CLASSE Triangle?
 
 1) Reaproveitamento de código: nós eliminamos o código repetido (cálculo das áreas dos triângulos x e y) no programa principal.
 2) Delegação de responsabilidades: quem deve ser responsável por saber como calcular a área de um triângulo é o próprio triângulo.
-   A lógica do cálculo da área não deve estar em outro lugar.
+     A lógica do cálculo da área não deve estar em outro lugar.
 
 Membros estáticos
 
@@ -511,3 +515,95 @@ membros = atributos e métodos
 • Uma classe que possui somente membros estáticos, pode ser uma classe estática também.
      Esta classe não poderá ser instanciada.
 
+Constante
+- Declaração: public static final double PI = 3.14159; => onde o final indica que é uma constante.
+
+Construtor
+
+• É uma operação especial da classe, que executa no momento da instanciação do objeto
+
+• Usos comuns:
+     • Iniciar valores dos atributos
+     • Permitir ou obrigar que o objeto receba dados / dependências no momento de sua instanciação (injeção de dependência)
+
+• Se um construtor customizado não for especificado, a classe disponibiliza o construtor padrão:
+     Product p = new Product();
+
+• É possível especificar mais de um construtor na mesma classe (sobrecarga)
+
+# Por convenção  o construtor vem depois dos atributos
+     # a palavra this faz referencia aos atributos 
+        public String name;
+         public double price;
+         public int quantity;
+         public Product(String name, double price, int quantity) {
+                   this.name = name;
+                   this.price = price;
+                   this.quantity = quantity;
+         }
+     # atribuição de variáveis (name, price e quantity) faz referencia aos paramentos do construtor
+         public Product(String name, double price, int quantity) {
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+        }
+
+Palavra this
+
+• É uma referência para o próprio objeto
+• Usos comuns:
+     • Diferenciar atributos de variáveis locais
+     • Passar o próprio objeto como argumento na chamada de um método ou construtor
+
+Sobrecarga
+
+• É um recurso que uma classe possui de oferecer mais de uma operação com o mesmo nome,
+porém com diferentes listas de parâmetros.
+
+Encapsulamento
+
+• É um princípio que consiste em esconder detalhes de implementação de uma classe, expondo apenas
+operações seguras e que mantenham os objetos em um estado consistente.
+• Regra de ouro: o objeto deve sempre estar em um estado consistente, e a própria classe deve garantir isso.
+
+Regra geral básica
+
+• Um objeto NÃO deve expor nenhum atributo (modificador de acesso private)
+• Os atributos devem ser acessados por meio de métodos get e set
+• Padrão JavaBeans: https://en.wikipedia.org/wiki/JavaBeans     
+
+Padrão para implementação de getters e setters
+
+# Por convenção a declaração de getters e setters vem depois dos construtores
+
+private String name;
+private double price;
+public String getName() {
+     return name;
+}
+public void setName(String name) {
+     this.name = name;
+}
+public double getPrice() {
+     return price;
+}
+public void setPrice(double price) {
+     this.price = price;
+}
+
+Gerando automaticamente construtores, getters e setters com Eclipse
+
+Comandos
+
+Dentro da Classe clique:
+
+• Botão direito -> Source -> Generate Constructor using Fields
+• Botão direito -> Source -> Generate Getters and Setters
+
+Modificadores de acesso
+
+• https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
+• private: o membro só pode ser acessado na própria classe
+• (nada): o membro só pode ser acessado nas classes do mesmo pacote
+• protected: o membro só pode ser acessado no mesmo pacote, bem como em subclasses de pacotes diferentes
+• public: o membro é acessado por todas classes (ao menos que ele resida em um módulo diferente que não exporte o pacote onde ele está)
