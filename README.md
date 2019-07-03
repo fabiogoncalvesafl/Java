@@ -607,3 +607,35 @@ Modificadores de acesso
 • (nada): o membro só pode ser acessado nas classes do mesmo pacote
 • protected: o membro só pode ser acessado no mesmo pacote, bem como em subclasses de pacotes diferentes
 • public: o membro é acessado por todas classes (ao menos que ele resida em um módulo diferente que não exporte o pacote onde ele está)
+
+Tipos referência vs. tipos valor
+
+Classes são tipos referência
+Variáveis cujo tipo são classes não devem ser entendidas como caixas, mas sim
+“tentáculos” (ponteiros) para caixas
+
+Tipos primitivos são tipos valor
+Em Java, tipos primitivos são tipos valor. Tipos valor são CAIXAS e não ponteiros.
+
+
+Desalocação de memória - garbage collector e escopo local
+
+Garbage collector
+
+• É um processo que automatiza o gerenciamento de memória de um programa em execução
+• O garbage collector monitora os objetos alocados dinamicamente pelo programa (no heap),
+desalocando aqueles que não estão mais sendo utilizados.
+
+Resumo
+
+• Objetos alocados dinamicamente, quando não possuem mais referência para eles,
+serão desalocados pelo garbage collector.
+
+• Variáveis locais são desalocadas imediatamente assim que seu escopo local sai de execução
+
+Boxing, unboxing e wrapper classes
+
+
+
+
+
