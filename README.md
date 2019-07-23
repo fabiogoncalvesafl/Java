@@ -1,13 +1,15 @@
-# Java - Dicas e Orientações
+#Dicas Eclipse
 
 Layout apropriado para projetos Java
 - Window / Perspective / Open Perspective / Other / Selecione Java
 - Window / Show View / Console
 
 Zerar o layout no Eclipse
+
 - Window -> Perspective -> Reset Perspective
 
 Alterar Tema para Dark
+
 - Window -> Preferences -> General -> Appearance -> Theme: selecione Dark
 
 Mudar o tamanho da fonte no Eclipse
@@ -19,7 +21,7 @@ Dicas de alto completar o código Java no Eclipse
 sysout Ctrl + Barra de espaço = System.out.println();
 
 Dica de auto completar comandos e variáveis
-
+ 
 Após digitar algum comando ou variável basta pressionar
 
 Crtl + Barra de Espaço
@@ -33,15 +35,37 @@ Executar o Programa
 - CTRL + F11
 
 Retornar um espaço do código
+
 - Selecione o trecho do código que quer retornar e pressione
+
 - SHIFT + Tab
 
-Importar bibliotecas no projeto sem ter sido declarado 
-
+Importar bibliotecas no projeto sem ter sido declarada
+ 
 Ctrl + Shift + o
 
 Criar um projeto Java
 - File / New / Java Project
+
+Debugging com Eclipse
+ 
+CTRL+SHIFT+B - marcar/desmarcar breakpoint
+- iniciar/continuar o debug
+F6 - executar um passo (pula função)
+F5 - executar um passo (entra na função)
+F7 - sair do método em execução
+- parar debug
+• Perspectiva Debug
+• Aba importante: Variables
+
+Gerando automaticamente construtores, getters e setters com Eclipse
+
+Dentro da Classe clique:
+
+• Botão direito -> Source -> Generate Constructor using Fields
+• Botão direito -> Source -> Generate Getters and Setters
+
+#Java - Convenções e Dicas
 
 Entry Point = Ponto de Entrada = public static void main(String[] args){}
 
@@ -185,7 +209,6 @@ Geralmente é um micro controlador, programação com interface de rede e arduin
 
 Operadores de Atribuição Cumulativa
 
-
 a += b;  => a = a + b;
 a -= b; => a = a - b;
 a *= b; => a = a * b;
@@ -304,19 +327,6 @@ Exemplo:
 public static void showResult(int value){
     System.out.println("Higher = " + value)
 }
-
-Debugging com Eclipse
-
-• Teclas
-
-CTRL+SHIFT+B - marcar/desmarcar breakpoint
-- iniciar/continuar o debug
-F6 - executar um passo (pula função)
-F5 - executar um passo (entra na função)
-F7 - sair do método em execução
-- parar debug
-• Perspectiva Debug
-• Aba importante: Variables
 
 Estrutura repetitiva while
 
@@ -591,15 +601,6 @@ public void setPrice(double price) {
      this.price = price;
 }
 
-Gerando automaticamente construtores, getters e setters com Eclipse
-
-Comandos
-
-Dentro da Classe clique:
-
-• Botão direito -> Source -> Generate Constructor using Fields
-• Botão direito -> Source -> Generate Getters and Setters
-
 Modificadores de acesso
 
 • https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
@@ -634,8 +635,3 @@ serão desalocados pelo garbage collector.
 • Variáveis locais são desalocadas imediatamente assim que seu escopo local sai de execução
 
 Boxing, unboxing e wrapper classes
-
-
-
-
-
