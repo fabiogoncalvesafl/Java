@@ -424,6 +424,21 @@ for (String s : nomes) {
      System.out.println(s);
 }
 
+Utilizando length
+Atribuindo um vetor da classe
+
+length = quantidade de elementos.
+
+int n = sc.nextInt();
+Vetores[] vect = new Vetores[n];
+
+for(int i=0; i<vect.length; i++) {
+    sc.nextLine();
+    String name = sc.nextLine();
+    double price = sc.nextDouble();
+    vect[i] = new Vetores(name, price); 
+}
+
 Matrizes
 
 Uma matriz corresponde a uma coleção de dados de tamanho fixo, indexada, bidimensional e homogênea
@@ -635,3 +650,70 @@ serão desalocados pelo garbage collector.
 • Variáveis locais são desalocadas imediatamente assim que seu escopo local sai de execução
 
 Boxing, unboxing e wrapper classes
+
+
+
+
+Laço "for each"
+Sintaxe opcional e simplificada para percorrer coleções
+
+Sintaxe:
+for (Tipo apelido : coleção) {
+     <comando 1>
+     <comando 2>
+}
+
+Leitura: "para cada objeto 'obj' contido em vect, faça:"
+
+String[] vect = new String[] {"Maria", "Bob", "Alex"};
+
+for (int i=0; i< vect.length; i++) {
+     System.out.println(vect[i]);
+}
+
+for (String obj : vect) {
+     System.out.println(obj);
+}
+
+Listas 
+
+• Conceito de lista
+• Tipo List - Declaração, instanciação
+• Demo
+• Referência: https://docs.oracle.com/javase/10/docs/api/java/util/List.html
+• Assuntos pendentes:
+     • interfaces
+     • generics
+     • predicados (lambda)
+
+• Lista é uma estrutura de dados: 
+
+     - Homogênea (dados do mesmo tipo)
+     - Ordenada (elementos acessados por meio de posições)
+      - Inicia vazia, e seus elementos são alocados sob demanda
+     - Cada elemento ocupa um "nó" (ou nodo) da lista
+
+• Tipo (interface): List
+• Classes que implementam: ArrayList, LinkedList, etc.
+
+• Vantagens:
+     • Tamanho variável
+     • Facilidade para se realizar inserções e deleções
+
+• Desvantagens:
+         • Acesso sequencial aos elementos *
+
+• Tamanho da lista: size()
+• Obter o elemento de uma posição: get(position)
+• Inserir elemento na lista: add(obj), add(int, obj)
+• Remover elementos da lista: remove(obj), remove(int), removeIf(Predicate)
+• Encontrar posição de elemento: indexOf(obj), lastIndexOf(obj)
+• Filtrar lista com base em predicado:
+     List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());
+• Encontrar primeira ocorrência com base em predicado:
+     Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
+
+• Assuntos pendentes:
+     • interfaces
+     • generics
+     • predicados (lambda)

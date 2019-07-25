@@ -1,27 +1,26 @@
 package entities;
 
 public class Account {
-	
-	private String holder;
+
 	private int number;
+	private String holder;
 	private double balance;
-	private double tax = 5.00;
-	// Construtores
-	public Account() {
-		
-	}
-	public Account(String holder, int number, double balance) {
-		this.holder = holder;
+
+	public Account(int number, String holder) {
 		this.number = number;
-		this.balance = balance;
+		this.holder = holder;
 	}
 
-	public Account(String holder, int number) {
-		super();
-		this.holder = holder;
+	public Account(int number, String holder, double initialDeposit) {
 		this.number = number;
+		this.holder = holder;
+		deposit(initialDeposit);
 	}
-	// Getters e Setters
+
+	public int getNumber() {
+		return number;
+	}
+
 	public String getHolder() {
 		return holder;
 	}
@@ -30,28 +29,20 @@ public class Account {
 		this.holder = holder;
 	}
 
-	public int getNumber() {
-		return number;
-	}
-
 	public double getBalance() {
 		return balance;
 	}
-	// Metodos
-	public void addBalance(double balance) {
-		this.balance += balance;
+
+	public void deposit(double amount) {
+		balance += amount;
 	}
 
-	public void removeBalance(double balance) {
-		this.balance = this.balance - tax - balance;
+	public void withdraw(double amount) {
+		balance -= amount + 5.0;
 	}
-	
+
 	public String toString() {
-		return "Account " 
-				+ number 
-				+ ", Holder: " 
-				+ holder
-				+ String.format(", Balance: $ %.2f%n", balance);
-		}
+		return "Account " + number + ", Holder: " + holder + String.format(", Balance: $ %.2f%n", balance);
+	}
 
 }
