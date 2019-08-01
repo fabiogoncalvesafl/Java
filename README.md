@@ -132,7 +132,7 @@ Quando criamos um array ou um objeto com os seguintes atributos, esses são os v
     \n = quebra de linha no C
 
 #### Exemplo
-
+```Java
     char gender = 'F';
     int age = 32;
     double balance = 10.35784;
@@ -141,7 +141,7 @@ Quando criamos um array ou um objeto com os seguintes atributos, esses são os v
     System.out.printf("%.2f%n", balance); 
     System.out.printf("%.4f%n", balance); 
     System.out.printf("%s is %d years old, gender %c, and got balance = %.2f bitcoins%n", name, age,gender, balance);
-
+```
 #### Resposta no console
 
     10,36
@@ -149,11 +149,12 @@ Quando criamos um array ou um objeto com os seguintes atributos, esses são os v
     Maria is 32 years old, gender F, and got balance = 10,36 bitcoins
 
 ### Como utilizar o ponto em vez da virgula para as casas decimais
-
+```Java
     import java.util.Locale;
     Locale.setDefault(Locale.US);
-
+```
 #### Exemplo
+```Java
     import java.util.Locale;
 
     public static void main(String[] args){
@@ -163,32 +164,38 @@ Quando criamos um array ou um objeto com os seguintes atributos, esses são os v
        Locale.setDefault(Locale.US);
        System.out.printf("%.4f%n", balance); 
     }
+```
 #### Resposta no console
 10.36
 
 ### Para ler um texto ATÉ A QUEBRA DE LINHA
-
+```Java
 s1 = sc.nextLine();
-
+```
 ### Limpeza de stream de entrada (flush)
 
 Antes de fazer um nextLine()
 - Se antes foi dada uma quebra de linha na stream de entrada sem o nextLine()
 - Então é preciso fazer um nextLine() extra para "limpar" a quebra de linha que
 fica pendente na stream
-
+```Java
     int n1 = sc.nextInt();
     sc.nextLine();
-
+```
 ### Algumas funções matemáticas em Java
 
 - sqrt – raiz quadrada
+```Java
     A = Math.sqrt(x); \\Variável A recebe a raiz quadrada de x
+```
 - pow – potenciação
+```Java
     A = Math.pow(x, y); \\ Variável A recebe o resultado de x elevado a y
+```
 - abs – valor absoluto
+```Java
     A = Math.abs(x); \\ Variável A recebe o valor absoluto de x
-
+```
 ### Operadores Lógicos
 
     ! negação (Inverte a a condição)
@@ -210,40 +217,40 @@ fica pendente na stream
     ^ => Operação "OU-exclusivo" bit a bit
 
 ### Operadores de Atribuição Cumulativa
-
-    a += b;  => a = a + b;
-    a -= b; => a = a - b;
-    a *= b; => a = a * b;
-    a /= b; => a = a / b;
-    a %= b; => a = a % b;
-
+```Java
+    a += b; // a = a + b;
+    a -= b; // a = a - b;
+    a *= b; // a = a * b;
+    a /= b; // a = a / b;
+    a %= b; // a = a % b;
+```
 ### Estruturas Condicionais
 
     if-else (se-senão)
 
-    Simples
-    REGRA:
-    V: executa o bloco de comandos
-    F: pula o bloco de comandos
-  
+- Simples
+  - REGRA:
+    - V: executa o bloco de comandos
+    - F: pula o bloco de comandos
+```Java  
     if (condição){
         comando 
     }
-
-    Composta
-    REGRA:
-    V: executa somente o bloco do if
-    F: executa somente o bloco do else
-
+```
+- Composta
+  - REGRA:
+    - V: executa somente o bloco do if
+    - F: executa somente o bloco do else
+```Java
     if (condição){
         comando 1
     }
     else {
         comando 2
     }
-
-    Encadeamentos
-
+```
+- Encadeamentos
+```Java
     if (condição){
         comando 1
     }
@@ -253,7 +260,7 @@ fica pendente na stream
     else {
         comando 3
     }
-
+```
 ### Funções interessantes para String
 
 - Formatar: toLowerCase(), toUpperCase(), trim()
@@ -343,8 +350,8 @@ fica pendente na stream
     - F: pula fora
 ```Java
     while ( condição ) {
-       \\comando 1
-       \\comando 2
+       comando 1
+       comando 2
     }
 ```
 ### Estrutura repetitiva for ("para")
@@ -353,8 +360,8 @@ fica pendente na stream
 Quando usar: quando se sabe previamente a quantidade de repetições, ou o intervalo de valores.
 ```Java    
     for ( início ; condição ; incremento) {
-        \\comando 1
-        \\comando 2
+        comando 1
+        comando 2
     }
 ```
 ### Estrutura repetitiva "faça-enquanto"
@@ -560,9 +567,9 @@ Quais são os benefícios de se calcular a área de um triângulo por meio de um
 
 - Constante
   - Declaração: 
-
-    public static final double PI = 3.14159; => onde o final indica que é uma constante.
-
+```Java
+    public static final double PI = 3.14159; \\ onde o final indica que é uma constante.
+```
 - Construtor
   - É uma operação especial da classe, que executa no momento da instanciação do objeto
 
@@ -679,12 +686,12 @@ serão desalocados pelo garbage collector.
 - Sintaxe opcional e simplificada para percorrer coleções
 
 - Sintaxe:
-    
+```Java    
     for (Tipo apelido : coleção) {
          <comando 1>
          <comando 2>
     }
-
+```
 - Leitura: "para cada objeto 'obj' contido em vect, faça:"
 ```Java
     String[] vect = new String[] {"Maria", "Bob", "Alex"};
@@ -730,10 +737,13 @@ serão desalocados pelo garbage collector.
 - Remover elementos da lista: remove(obj), remove(int), removeIf(Predicate)
 - Encontrar posição de elemento: indexOf(obj), lastIndexOf(obj)
 - Filtrar lista com base em predicado:
-  - List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());
+```Java  
+    List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());
+```
 - Encontrar primeira ocorrência com base em predicado:
-  - Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
-
+```Java
+    Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
+```
 - Assuntos pendentes:
   - interfaces
   - generics
@@ -741,7 +751,7 @@ serão desalocados pelo garbage collector.
 
 ### Date
 
-Representa um INSTANTE
+- Representa um INSTANTE
 
 #### Pacote java.util
 
@@ -836,4 +846,3 @@ Representa um INSTANTE
     System.out.println("Minutes: " + minutes);
     System.out.println("Month: " + month);
 ```
-
