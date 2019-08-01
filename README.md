@@ -846,3 +846,116 @@ serão desalocados pelo garbage collector.
     System.out.println("Minutes: " + minutes);
     System.out.println("Month: " + month);
 ```
+
+Enumerações
+
+• É um tipo especial que serve para especificar de forma literal um conjunto de constantes relacionadas
+• Palavra chave em Java: enum
+• Vantagem: melhor semântica, código mais legível e auxiliado pelo compilador
+• Referência: https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+
+package entities.enums;
+public enum OrderStatus {
+     PENDING_PAYMENT,
+     PROCESSING,
+     SHIPPED,
+     DELIVERED;
+}
+
+package entities;
+import java.util.Date;
+import entities.enums.OrderStatus;
+public class Order {
+     private Integer id;
+     private Date moment;
+     private OrderStatus status;
+     (...)
+}
+
+Conversão de String para enum
+
+ - OrderStatus os1 = OrderStatus.DELIVERED;
+ - OrderStatus os2 = OrderStatus.valueOf("DELIVERED");
+
+### Notação UML
+
+
+
+### Design
+
+#### Categorias de classes
+
+- Em um sistema orientado a objetos, de modo geral "tudo" é objeto.
+
+- Por questões de design tais como organização, flexibilidade, reuso, delegação, etc., há várias categorias de classes:
+  - Views
+  - Controllers
+  - Entities
+  - Services
+  - Repositories
+
+#### Composição
+
+- É um tipo de associação que permite que um objeto contenha outro
+- Relação "tem-um" ou "tem-vários"
+- Vantagens
+  - Organização: divisão de responsabilidades
+  - Coesão
+  - Flexibilidade
+  - Reuso
+- Nota: embora o símbolo UML para composição (todo-parte) seja o diamante preto,
+neste contexto estamos chamando de composição qualquer associação tipo "tem-um" e "tem-vários".
+
+### Entities
+
+
+### Services
+
+#### Observação
+
+- Na classe do objeto quando houver lista, na hora de gerar o construtor não devemos marcar a lista 
+mas sim instanciar a lista separada.
+```Java
+package entities;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import entities.enums.WorkerLevel;
+
+public class Worker {
+
+private String name;
+private WorkerLevel level;
+private Double baseSalary;
+//Composição de Objetos (Associação)
+private Department department; // Associação de 1
+private List<HourContract> contracts = new ArrayList<>(); //Associação de vários | devemos criar uma lista | instanciar em vez de colocar no construtor.
+
+public Worker() {
+}
+
+public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
+this.name = name;
+this.level = level;
+this.baseSalary = baseSalary;
+this.department = department;
+}
+```
+### StringBuilder
+```Java
+public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append(title + "\n");
+    sb.append(likes);
+    sb.append(" Likes - ");
+    sb.append(sdf.format(moment) + "\n");
+    sb.append(content + "\n");
+    sb.append("Comments:\n");
+    for (Comment c : comments) {
+        sb.append(c.getText() + "\n");
+    }
+    return sb.toString();
+}
+```
