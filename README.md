@@ -263,22 +263,23 @@ fica pendente na stream
 - str.Split(" ")
 
 ### Manipular char
-
+```Java
     char caracter = sc.next().charAt(0);
-
+```
 ### Operação split
-
+```Java
     String s = "potato apple lemon";
     String[] vect = s.split(" ");
     String word1 = vect[0];
     String word2 = vect[1];
     String word3 = vect[2];
-
+```
 ### switch-case
 
 - Estrutura opcional a vários if-else encadeados, quando a condição envolve o teste do valor de uma variável.
 
 #### Sintaxe:
+```Java
     var minhaVariavel = (...);
     switch (minhaVariavel) {
     case 1:
@@ -290,7 +291,7 @@ fica pendente na stream
     default:
     System.out.println("Caso padrão");
     }
-
+```
 ### Expressão condicional ternária
 
 - Estrutura opcional ao if-else quando se deseja decidir um VALOR com base em uma condição.
@@ -326,52 +327,52 @@ fica pendente na stream
 - void => executa uma ação e não retorna um valor (void = vazio).
 
 #### Exemplo:
-
+```Java
     public static void showResult(int value){
         System.out.println("Higher = " + value)
     }
-
+```
 ### Estrutura repetitiva while
 
 - É uma estrutura de controle que repete um bloco de comandos enquanto uma condição for verdadeira.
 - Quando usar: quando não se sabe previamente a quantidade de repetições que será realizada.
 
-    Estrutura "enquanto"
-    Regra: 
-    V: executa e volta
-    F: pula fora
-
+- Estrutura "enquanto"
+  - Regra: 
+    - V: executa e volta
+    - F: pula fora
+```Java
     while ( condição ) {
-       comando 1
-       comando 2
+       \\comando 1
+       \\comando 2
     }
-
+```
 ### Estrutura repetitiva for ("para")
 
 É uma estrutura de controle que repete um bloco de comandos para um certo intervalo de valores.
 Quando usar: quando se sabe previamente a quantidade de repetições, ou o intervalo de valores.
-    
+```Java    
     for ( início ; condição ; incremento) {
-        comando 1
-        comando 2
+        \\comando 1
+        \\comando 2
     }
-
+```
 ### Estrutura repetitiva "faça-enquanto"
 
 - Menos utilizada, mas em alguns casos se encaixa melhor ao problema.
 - O bloco de comandos executa pelo menos uma vez, pois a condição é verificada no final.
 
-    Regra:
-    V: volta
-    F: pula fora
+- Regra:
+  - V: volta
+  - F: pula fora
 
 - Sintaxe / regra
-
+```Java
     do {
         comando 1
         comando 2
     } while ( condição );
-
+```
 ### Vetores
 
 - Um vetor corresponde a uma coleção de dados de tamanho fixo, indexada, unidimensional e homogênea
@@ -391,7 +392,7 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 - Acesso: B[3] = 20;
 
 #### Exemplo de declaração e instanciação na mesma linha:
-
+```Java
     double[] b = new double[5];
 
     Regra de 3 (como montar)
@@ -411,9 +412,9 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
     }
 
     double x = (double) cont * 100 / n;
-
+```
 #### Sintaxe opcional: "para cada"
-
+```Java
     int N = sc.nextInt();
     String[] nomes = new String[N];
 
@@ -425,7 +426,7 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
     for (String s : nomes) {
          System.out.println(s);
     }
-
+```
 ### Utilizando length
 #### Atribuindo um vetor da classe
 
@@ -470,18 +471,18 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 - Um arranjo deve ser alocado previamente, antes de ser utilizado. Uma vez alocado, sua quantidade de elementos é fixa
 
 #### Como criar uma matriz?
-
+```Java
     declaração => double[][] A;
     instanciação => A = new double[3][4];
-
+```
 #### Exemplo de declaração e instanciação na mesma linha:
-
+```Java
     double[][] A = new double[3][4];
-
+```
 #### Como acessar os elementos de uma matriz?
-
+```Java
     A[1][2] = 10;
-
+```
 ### Programação Orientada a Objetos com Java
 
 #### Classes, atributos, métodos, membros estáticos
@@ -510,7 +511,7 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 
 - Classe: é a definição do tipo
 - Objetos: são instâncias da classe
-
+```Java
     package course; \\ Pacote da Classe
 
     public class Triangle { \\ Nome da Classe
@@ -527,7 +528,7 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
         double p = (a + b + c) / 2.0;                                   
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
-    
+```    
 
 #### Observação: Quando os membros da classe não são estáticos, você é obrigado a instancia-los para poder utiliza-la.
 
@@ -570,14 +571,14 @@ Quais são os benefícios de se calcular a área de um triângulo por meio de um
   - Permitir ou obrigar que o objeto receba dados / dependências no momento de sua instanciação (injeção de dependência)
 
 - Se um construtor customizado não for especificado, a classe disponibiliza o construtor padrão:
-  
+```Java  
     Product p = new Product();
-
+```
 - É possível especificar mais de um construtor na mesma classe (sobrecarga)
 
 ### Por convenção  o construtor vem depois dos atributos
 #### a palavra this faz referencia aos atributos 
-
+```Java
     public String name;
     public double price;
     public int quantity;
@@ -586,15 +587,15 @@ Quais são os benefícios de se calcular a área de um triângulo por meio de um
         this.price = price;
         this.quantity = quantity;
     }
-     
+```     
 #### atribuição de variáveis (name, price e quantity) faz referencia aos paramentos do construtor
-
+```Java
     public Product(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
-
+```
 ### Palavra this
 
 - É uma referência para o próprio objeto
@@ -622,7 +623,7 @@ operações seguras e que mantenham os objetos em um estado consistente.
 Padrão para implementação de getters e setters
 
 ### Por convenção a declaração de getters e setters vem depois dos construtores
-
+```Java
     private String name;
     private double price;
     public String getName() {
@@ -637,7 +638,7 @@ Padrão para implementação de getters e setters
     public void setPrice(double price) {
         this.price = price;
     }
-
+```
 ### Modificadores de acesso
 
 - https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
@@ -685,7 +686,7 @@ serão desalocados pelo garbage collector.
     }
 
 - Leitura: "para cada objeto 'obj' contido em vect, faça:"
-
+```Java
     String[] vect = new String[] {"Maria", "Bob", "Alex"};
 
     for (int i=0; i< vect.length; i++) {
@@ -695,7 +696,7 @@ serão desalocados pelo garbage collector.
     for (String obj : vect) {
          System.out.println(obj);
     }
-
+```
 ### Listas 
 
 - Conceito de lista
@@ -766,7 +767,7 @@ Representa um INSTANTE
 - Date y3 = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
 
 #### Demostração:
-
+```Java
     SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
     SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     SimpleDateFormat sdf3 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -801,11 +802,11 @@ Representa um INSTANTE
     System.out.println("y1: " + sdf3.format(y1));
     System.out.println("y2: " + sdf3.format(y2));
     System.out.println("y3: " + sdf3.format(y3));
-
+```
 ### Manipulando uma data com Calendar
 
 #### Somando uma unidade de tempo
-
+```Java
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
     Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
@@ -818,9 +819,9 @@ Representa um INSTANTE
     d = cal.getTime();
 
     System.out.println(sdf.format(d));
-
+```
 ### Obtendo uma unidade de tempo
-
+```Java
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
     Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
@@ -834,5 +835,5 @@ Representa um INSTANTE
 
     System.out.println("Minutes: " + minutes);
     System.out.println("Month: " + month);
-
+```
 
