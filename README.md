@@ -134,14 +134,14 @@ Quando criamos um array ou um objeto com os seguintes atributos, esses são os v
 
 #### Exemplo
 ```Java
-    char gender = 'F';
-    int age = 32;
-    double balance = 10.35784;
-    String name = "Maria";
+char gender = 'F';
+int age = 32;
+double balance = 10.35784;
+String name = "Maria";
 
-    System.out.printf("%.2f%n", balance); 
-    System.out.printf("%.4f%n", balance); 
-    System.out.printf("%s is %d years old, gender %c, and got balance = %.2f bitcoins%n", name, age,gender, balance);
+System.out.printf("%.2f%n", balance); 
+System.out.printf("%.4f%n", balance); 
+System.out.printf("%s is %d years old, gender %c, and got balance = %.2f bitcoins%n", name, age,gender, balance);
 ```
 #### Resposta no console
 
@@ -151,20 +151,20 @@ Quando criamos um array ou um objeto com os seguintes atributos, esses são os v
 
 ### Como utilizar o ponto em vez da virgula para as casas decimais
 ```Java
-    import java.util.Locale;
-    Locale.setDefault(Locale.US);
+import java.util.Locale;
+Locale.setDefault(Locale.US);
 ```
 #### Exemplo
 ```Java
-    import java.util.Locale;
+import java.util.Locale;
 
-    public static void main(String[] args){
+public static void main(String[] args){
 
-       double balance = 10.35784;
+   double balance = 10.35784;
 
-       Locale.setDefault(Locale.US);
-       System.out.printf("%.4f%n", balance); 
-    }
+   Locale.setDefault(Locale.US);
+   System.out.printf("%.4f%n", balance); 
+}
 ```
 #### Resposta no console
 10.36
@@ -180,22 +180,22 @@ Antes de fazer um nextLine()
 - Então é preciso fazer um nextLine() extra para "limpar" a quebra de linha que
 fica pendente na stream
 ```Java
-    int n1 = sc.nextInt();
-    sc.nextLine();
+int n1 = sc.nextInt();
+sc.nextLine();
 ```
 ### Algumas funções matemáticas em Java
 
 - sqrt – raiz quadrada
 ```Java
-    A = Math.sqrt(x); //Variável A recebe a raiz quadrada de x
+A = Math.sqrt(x); //Variável A recebe a raiz quadrada de x
 ```
 - pow – potenciação
 ```Java
-    A = Math.pow(x, y); // Variável A recebe o resultado de x elevado a y
+A = Math.pow(x, y); // Variável A recebe o resultado de x elevado a y
 ```
 - abs – valor absoluto
 ```Java
-    A = Math.abs(x); // Variável A recebe o valor absoluto de x
+A = Math.abs(x); // Variável A recebe o valor absoluto de x
 ```
 ### Operadores Lógicos
 
@@ -219,11 +219,11 @@ fica pendente na stream
 
 ### Operadores de Atribuição Cumulativa
 ```Java
-    a += b; // a = a + b;
-    a -= b; // a = a - b;
-    a *= b; // a = a * b;
-    a /= b; // a = a / b;
-    a %= b; // a = a % b;
+a += b; // a = a + b;
+a -= b; // a = a - b;
+a *= b; // a = a * b;
+a /= b; // a = a / b;
+a %= b; // a = a % b;
 ```
 ### Estruturas Condicionais
 
@@ -234,33 +234,33 @@ fica pendente na stream
     - V: executa o bloco de comandos
     - F: pula o bloco de comandos
 ```Java  
-    if (condição){
-        comando 
-    }
+if (condição){
+   comando 
+}
 ```
 - Composta
   - REGRA:
     - V: executa somente o bloco do if
     - F: executa somente o bloco do else
 ```Java
-    if (condição){
-        comando 1
-    }
-    else {
-        comando 2
-    }
+if (condição){
+    comando 1
+}
+else {
+    comando 2
+}
 ```
 - Encadeamentos
 ```Java
-    if (condição){
-        comando 1
-    }
-    else if (condição){
-        comando 2
-    }
-    else {
-        comando 3
-    }
+if (condição){
+    comando 1
+}
+else if (condição){
+     comando 2
+}
+else {
+     comando 3
+}
 ```
 ### Funções interessantes para String
 
@@ -272,15 +272,15 @@ fica pendente na stream
 
 ### Manipular char
 ```Java
-    char caracter = sc.next().charAt(0);
+char caracter = sc.next().charAt(0);
 ```
 ### Operação split
 ```Java
-    String s = "potato apple lemon";
-    String[] vect = s.split(" ");
-    String word1 = vect[0];
-    String word2 = vect[1];
-    String word3 = vect[2];
+String s = "potato apple lemon";
+String[] vect = s.split(" ");
+String word1 = vect[0];
+String word2 = vect[1];
+String word3 = vect[2];
 ```
 ### switch-case
 
@@ -288,17 +288,17 @@ fica pendente na stream
 
 #### Sintaxe:
 ```Java
-    var minhaVariavel = (...);
-    switch (minhaVariavel) {
-    case 1:
-    System.out.println("Caso 1");
-    break;
-    case 2:
-    System.out.println("Caso 2");
-    break;
-    default:
-    System.out.println("Caso padrão");
-    }
+var minhaVariavel = (...);
+switch (minhaVariavel) {
+   case 1:
+      System.out.println("Caso 1");
+   break;
+   case 2:
+      System.out.println("Caso 2");
+   break;
+   default:
+      System.out.println("Caso padrão");
+}
 ```
 ### Expressão condicional ternária
 
@@ -336,9 +336,9 @@ fica pendente na stream
 
 #### Exemplo:
 ```Java
-    public static void showResult(int value){
-        System.out.println("Higher = " + value)
-    }
+public static void showResult(int value){
+   System.out.println("Higher = " + value)
+}
 ```
 ### Estrutura repetitiva while
 
@@ -350,20 +350,20 @@ fica pendente na stream
     - V: executa e volta
     - F: pula fora
 ```Java
-    while ( condição ) {
-       comando 1
-       comando 2
-    }
+while ( condição ) {
+   comando 1
+   comando 2
+}
 ```
 ### Estrutura repetitiva for ("para")
 
 É uma estrutura de controle que repete um bloco de comandos para um certo intervalo de valores.
 Quando usar: quando se sabe previamente a quantidade de repetições, ou o intervalo de valores.
 ```Java    
-    for ( início ; condição ; incremento) {
-        comando 1
-        comando 2
-    }
+for ( início ; condição ; incremento) {
+    comando 1
+    comando 2
+}
 ```
 ### Estrutura repetitiva "faça-enquanto"
 
@@ -376,10 +376,10 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 
 - Sintaxe / regra
 ```Java
-    do {
-        comando 1
-        comando 2
-    } while ( condição );
+do {
+    comando 1
+    comando 2
+} while ( condição );
 ```
 ### Vetores
 
@@ -403,54 +403,54 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 
 #### Exemplo de declaração e instanciação na mesma linha:
 ```Java
-    double[] b = new double[5];
+double[] b = new double[5];
 
-    Regra de 3 (como montar)
+Regra de 3 (como montar)
 
-    int n = sc.nextInt();
-    int[] idades = new int[n];
+int n = sc.nextInt();
+int[] idades = new int[n];
 
-    for (int i = 0; i < n; i++) {
-         idades[i] = sc.nextInt();
+for (int i = 0; i < n; i++) {
+     idades[i] = sc.nextInt();
+}
+
+int cont = 0;
+for (int i = 0; i < n; i++) {
+    if (idades[i] < 16) {
+        cont = cont + 1;
     }
+}
 
-    int cont = 0;
-    for (int i = 0; i < n; i++) {
-        if (idades[i] < 16) {
-            cont = cont + 1;
-        }
-    }
-
-    double x = (double) cont * 100 / n;
+double x = (double) cont * 100 / n;
 ```
 #### Sintaxe opcional: "para cada"
 ```Java
-    int N = sc.nextInt();
-    String[] nomes = new String[N];
+int N = sc.nextInt();
+String[] nomes = new String[N];
 
-    for (int i=0; i<N; i++) {
-         nomes[i] = sc.next();
-    }
-    System.out.println("Nomes lidos:");
+for (int i=0; i<N; i++) {
+     nomes[i] = sc.next();
+}
+System.out.println("Nomes lidos:");
 
-    for (String s : nomes) {
-         System.out.println(s);
-    }
+for (String s : nomes) {
+     System.out.println(s);
+}
 ```
 ### Utilizando length
 #### Atribuindo um vetor da classe
 
 - length = quantidade de elementos.
 ```Java
-    int n = sc.nextInt();
-    Vetores[] vect = new Vetores[n];
+int n = sc.nextInt();
+Vetores[] vect = new Vetores[n];
 
-    for(int i=0; i<vect.length; i++) {
-        sc.nextLine();
-        String name = sc.nextLine();
-        double price = sc.nextDouble();
-        vect[i] = new Vetores(name, price); 
-    }
+for(int i=0; i<vect.length; i++) {
+    sc.nextLine();
+    String name = sc.nextLine();
+    double price = sc.nextDouble();
+    vect[i] = new Vetores(name, price); 
+}
 ```
 ### Matrizes
 
@@ -482,16 +482,16 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 
 #### Como criar uma matriz?
 ```Java
-    declaração => double[][] A;
-    instanciação => A = new double[3][4];
+declaração => double[][] A;
+instanciação => A = new double[3][4];
 ```
 #### Exemplo de declaração e instanciação na mesma linha:
 ```Java
-    double[][] A = new double[3][4];
+double[][] A = new double[3][4];
 ```
 #### Como acessar os elementos de uma matriz?
 ```Java
-    A[1][2] = 10;
+A[1][2] = 10;
 ```
 ### Programação Orientada a Objetos com Java
 
@@ -522,22 +522,22 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 - Classe: é a definição do tipo
 - Objetos: são instâncias da classe
 ```Java
-    package course; // Pacote da Classe
+package course; // Pacote da Classe
 
-    public class Triangle { //Nome da Classe
+public class Triangle { //Nome da Classe
     
-    public double a; // Atributos da Classe
-    public double b; // Atributos da Classe
-    public double c; // Atributos da Classe
-    // Metodo
-    public // O prefixo "public" indica que o atributo ou método pode ser usado em outros arquivos    
-    double // Tipo do dado que o método retorna (se o método não retorna nada, usa-se a palavra "void")
-    area // Nome do método
-    () // Lista de parâmetros do método
-    public double area() {  
-        double p = (a + b + c) / 2.0;                                   
-        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
-    }
+public double a; // Atributos da Classe
+public double b; // Atributos da Classe
+public double c; // Atributos da Classe
+// Metodo
+public // O prefixo "public" indica que o atributo ou método pode ser usado em outros arquivos    
+double // Tipo do dado que o método retorna (se o método não retorna nada, usa-se a palavra "void")
+area // Nome do método
+() // Lista de parâmetros do método
+public double area() {  
+    double p = (a + b + c) / 2.0;                                   
+    return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+}
 ```    
 
 #### Observação: Quando os membros da classe não são estáticos, você é obrigado a instancia-los para poder utiliza-la.
@@ -571,7 +571,7 @@ Quais são os benefícios de se calcular a área de um triângulo por meio de um
 - Constante
   - Declaração: 
 ```Java
-    public static final double PI = 3.14159; // onde o final indica que é uma constante.
+public static final double PI = 3.14159; // onde o final indica que é uma constante.
 ```
 - Construtor
   - É uma operação especial da classe, que executa no momento da instanciação do objeto
@@ -582,29 +582,29 @@ Quais são os benefícios de se calcular a área de um triângulo por meio de um
 
 - Se um construtor customizado não for especificado, a classe disponibiliza o construtor padrão:
 ```Java  
-    Product p = new Product();
+Product p = new Product();
 ```
 - É possível especificar mais de um construtor na mesma classe (sobrecarga)
 
 ### Por convenção  o construtor vem depois dos atributos
 #### a palavra this faz referencia aos atributos 
 ```Java
-    public String name;
-    public double price;
-    public int quantity;
-    public Product(String name, double price, int quantity) {
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-    }
+public String name;
+public double price;
+public int quantity;
+public Product(String name, double price, int quantity) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+}
 ```     
 #### atribuição de variáveis (name, price e quantity) faz referencia aos paramentos do construtor
 ```Java
-    public Product(String name, double price, int quantity) {
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-    }
+public Product(String name, double price, int quantity) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+}
 ```
 ### Palavra this
 
@@ -634,20 +634,20 @@ Padrão para implementação de getters e setters
 
 ### Por convenção a declaração de getters e setters vem depois dos construtores
 ```Java
-    private String name;
-    private double price;
-    public String getName() {
-         return name;
-    }
-    public void setName(String name) {
-         this.name = name;
-    }
-    public double getPrice() {
-         return price;
-    }
-    public void setPrice(double price) {
-        this.price = price;
-    }
+private String name;
+private double price;
+public String getName() {
+     return name;
+}
+public void setName(String name) {
+     this.name = name;
+}
+public double getPrice() {
+     return price;
+}
+public void setPrice(double price) {
+    this.price = price;
+}
 ```
 ### Modificadores de acesso
 
@@ -698,22 +698,22 @@ serão desalocados pelo garbage collector.
 
 - Sintaxe:
 ```Java    
-    for (Tipo apelido : coleção) {
-         <comando 1>
-         <comando 2>
-    }
+for (Tipo apelido : coleção) {
+     <comando 1>
+     <comando 2>
+}
 ```
 - Leitura: "para cada objeto 'obj' contido em vect, faça:"
 ```Java
-    String[] vect = new String[] {"Maria", "Bob", "Alex"};
+String[] vect = new String[] {"Maria", "Bob", "Alex"};
 
-    for (int i=0; i< vect.length; i++) {
-         System.out.println(vect[i]);
-    }
+for (int i=0; i< vect.length; i++) {
+     System.out.println(vect[i]);
+}
 
-    for (String obj : vect) {
-         System.out.println(obj);
-    }
+for (String obj : vect) {
+     System.out.println(obj);
+}
 ```
 ### Listas 
 
@@ -749,11 +749,11 @@ serão desalocados pelo garbage collector.
 - Encontrar posição de elemento: indexOf(obj), lastIndexOf(obj)
 - Filtrar lista com base em predicado:
 ```Java  
-    List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());
+List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());
 ```
 - Encontrar primeira ocorrência com base em predicado:
 ```Java
-    Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
+Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
 ```
 - Assuntos pendentes:
   - interfaces
@@ -789,73 +789,73 @@ serão desalocados pelo garbage collector.
 
 #### Demostração:
 ```Java
-    SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
-    SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-    SimpleDateFormat sdf3 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-    sdf3.setTimeZone(TimeZone.getTimeZone("GMT"));
-    Date x1 = new Date();
-    Date x2 = new Date(System.currentTimeMillis());
-    Date x3 = new Date(0L);
-    Date x4 = new Date(1000L * 60L * 60L * 5L);
-    Date y1 = sdf1.parse("25/06/2018");
-    Date y2 = sdf2.parse("25/06/2018 15:42:07");
-    Date y3 = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
-    System.out.println("x1: " + x1);
-    System.out.println("x2: " + x2);
-    System.out.println("x3: " + x3);
-    System.out.println("x4: " + x4);
-    System.out.println("y1: " + y1);
-    System.out.println("y2: " + y2);
-    System.out.println("y3: " + y3);
-    System.out.println("-------------");
-    System.out.println("x1: " + sdf2.format(x1));
-    System.out.println("x2: " + sdf2.format(x2));
-    System.out.println("x3: " + sdf2.format(x3));
-    System.out.println("x4: " + sdf2.format(x4));
-    System.out.println("y1: " + sdf2.format(y1));
-    System.out.println("y2: " + sdf2.format(y2));
-    System.out.println("y3: " + sdf2.format(y3));
-    System.out.println("-------------");
-    System.out.println("x1: " + sdf3.format(x1));
-    System.out.println("x2: " + sdf3.format(x2));
-    System.out.println("x3: " + sdf3.format(x3));
-    System.out.println("x4: " + sdf3.format(x4));
-    System.out.println("y1: " + sdf3.format(y1));
-    System.out.println("y2: " + sdf3.format(y2));
-    System.out.println("y3: " + sdf3.format(y3));
+SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+SimpleDateFormat sdf3 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+sdf3.setTimeZone(TimeZone.getTimeZone("GMT"));
+Date x1 = new Date();
+Date x2 = new Date(System.currentTimeMillis());
+Date x3 = new Date(0L);
+Date x4 = new Date(1000L * 60L * 60L * 5L);
+Date y1 = sdf1.parse("25/06/2018");
+Date y2 = sdf2.parse("25/06/2018 15:42:07");
+Date y3 = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
+System.out.println("x1: " + x1);
+System.out.println("x2: " + x2);
+System.out.println("x3: " + x3);
+System.out.println("x4: " + x4);
+System.out.println("y1: " + y1);
+System.out.println("y2: " + y2);
+System.out.println("y3: " + y3);
+System.out.println("-------------");
+System.out.println("x1: " + sdf2.format(x1));
+System.out.println("x2: " + sdf2.format(x2));
+System.out.println("x3: " + sdf2.format(x3));
+System.out.println("x4: " + sdf2.format(x4));
+System.out.println("y1: " + sdf2.format(y1));
+System.out.println("y2: " + sdf2.format(y2));
+System.out.println("y3: " + sdf2.format(y3));
+System.out.println("-------------");
+System.out.println("x1: " + sdf3.format(x1));
+System.out.println("x2: " + sdf3.format(x2));
+System.out.println("x3: " + sdf3.format(x3));
+System.out.println("x4: " + sdf3.format(x4));
+System.out.println("y1: " + sdf3.format(y1));
+System.out.println("y2: " + sdf3.format(y2));
+System.out.println("y3: " + sdf3.format(y3));
 ```
 ### Manipulando uma data com Calendar
 
 #### Somando uma unidade de tempo
 ```Java
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
-    Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
+Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
 
-    System.out.println(sdf.format(d));
+System.out.println(sdf.format(d));
 
-    Calendar cal = Calendar.getInstance();
-    cal.setTime(d);
-    cal.add(Calendar.HOUR_OF_DAY, 4);
-    d = cal.getTime();
+Calendar cal = Calendar.getInstance();
+cal.setTime(d);
+cal.add(Calendar.HOUR_OF_DAY, 4);
+d = cal.getTime();
 
-    System.out.println(sdf.format(d));
+System.out.println(sdf.format(d));
 ```
 ### Obtendo uma unidade de tempo
 ```Java
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
-    Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
+Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
 
-    System.out.println(sdf.format(d));
+System.out.println(sdf.format(d));
 
-    Calendar cal = Calendar.getInstance();
-    cal.setTime(d);
-    int minutes = cal.get(Calendar.MINUTE);
-    int month = 1 + cal.get(Calendar.MONTH);
+Calendar cal = Calendar.getInstance();
+cal.setTime(d);
+int minutes = cal.get(Calendar.MINUTE);
+int month = 1 + cal.get(Calendar.MONTH);
 
-    System.out.println("Minutes: " + minutes);
-    System.out.println("Month: " + month);
+System.out.println("Minutes: " + minutes);
+System.out.println("Month: " + month);
 ```
 
 ### Enumerações
@@ -885,8 +885,8 @@ public class Order {
 ```
 ### Conversão de String para enum
 ```Java
- OrderStatus os1 = OrderStatus.DELIVERED;
- OrderStatus os2 = OrderStatus.valueOf("DELIVERED");
+OrderStatus os1 = OrderStatus.DELIVERED;
+OrderStatus os2 = OrderStatus.valueOf("DELIVERED");
 ```
 ### Notação UML
 
