@@ -382,6 +382,8 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 ```
 ### Vetores
 
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/Vetor.png)
+
 - Um vetor corresponde a uma coleção de dados de tamanho fixo, indexada, unidimensional e homogênea
 
 - Indexada: os elementos são acessados por meio de índices
@@ -663,6 +665,7 @@ Padrão para implementação de getters e setters
 ### Tipos primitivos são tipos valor
 - Em Java, tipos primitivos são tipos valor. Tipos valor são CAIXAS e não ponteiros.
 
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/Referencias_vs_valor.png)
 
 #### Desalocação de memória - garbage collector e escopo local
 
@@ -681,6 +684,13 @@ serão desalocados pelo garbage collector.
 
 ### Boxing, unboxing e wrapper classes
 
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/Boxing.png)
+
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/Unboxing.png)
+
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/Wrapper_classes.png)
+
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/Demo.png)
 
 ### Laço "for each"
 - Sintaxe opcional e simplificada para percorrer coleções
@@ -847,13 +857,13 @@ serão desalocados pelo garbage collector.
     System.out.println("Month: " + month);
 ```
 
-Enumerações
+### Enumerações
 
-• É um tipo especial que serve para especificar de forma literal um conjunto de constantes relacionadas
-• Palavra chave em Java: enum
-• Vantagem: melhor semântica, código mais legível e auxiliado pelo compilador
-• Referência: https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
-
+- É um tipo especial que serve para especificar de forma literal um conjunto de constantes relacionadas
+- Palavra chave em Java: enum
+- Vantagem: melhor semântica, código mais legível e auxiliado pelo compilador
+- Referência: https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+```Java
 package entities.enums;
 public enum OrderStatus {
      PENDING_PAYMENT,
@@ -871,15 +881,17 @@ public class Order {
      private OrderStatus status;
      (...)
 }
-
-Conversão de String para enum
-
- - OrderStatus os1 = OrderStatus.DELIVERED;
- - OrderStatus os2 = OrderStatus.valueOf("DELIVERED");
-
+```
+### Conversão de String para enum
+```Java
+ OrderStatus os1 = OrderStatus.DELIVERED;
+ OrderStatus os2 = OrderStatus.valueOf("DELIVERED");
+```
 ### Notação UML
 
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/uml-enum.png)
 
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/uml-enum2.png)
 
 ### Design
 
@@ -908,8 +920,11 @@ neste contexto estamos chamando de composição qualquer associação tipo "tem-
 
 ### Entities
 
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/entities.png)
 
 ### Services
+
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/services.png)
 
 #### Observação
 
