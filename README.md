@@ -440,7 +440,7 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
         double price = sc.nextDouble();
         vect[i] = new Vetores(name, price); 
     }
-
+```
 ### Matrizes
 
 - Em programação, "matriz" é o nome dado a arranjos bidimensionais
