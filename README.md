@@ -60,12 +60,13 @@ Selecione o trecho do código que quer retornar e pressione
 - Perspectiva Debug
 - Aba importante: Variables
 
-### Gerando automaticamente construtores, getters e setters com Eclipse
+### Gerando automaticamente construtores, getters and setters e toString com Eclipse
 
 Dentro da Classe clique:
 
 - Botão direito -> Source -> Generate Constructor using Fields
 - Botão direito -> Source -> Generate Getters and Setters
+- Botão direito -> Source -> Generate toString
 
 # Java - Convenções e Dicas
 
