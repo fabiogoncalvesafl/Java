@@ -219,9 +219,9 @@ fica pendente na stream
 
 ### Estruturas Condicionais
 
-if-else (se-senão)
+    if-else (se-senão)
 
-- Simples
+    Simples
     REGRA:
     V: executa o bloco de comandos
     F: pula o bloco de comandos
@@ -230,7 +230,7 @@ if-else (se-senão)
         comando 
     }
 
-- Composta
+    Composta
     REGRA:
     V: executa somente o bloco do if
     F: executa somente o bloco do else
@@ -242,7 +242,7 @@ if-else (se-senão)
         comando 2
     }
 
-- Encadeamentos
+    Encadeamentos
 
     if (condição){
         comando 1
@@ -394,8 +394,7 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 
     double[] b = new double[5];
 
-
-- Regra de 3 (como montar)
+    Regra de 3 (como montar)
 
     int n = sc.nextInt();
     int[] idades = new int[n];
@@ -431,7 +430,7 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 #### Atribuindo um vetor da classe
 
 - length = quantidade de elementos.
-
+```Java
     int n = sc.nextInt();
     Vetores[] vect = new Vetores[n];
 
@@ -512,18 +511,18 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 - Classe: é a definição do tipo
 - Objetos: são instâncias da classe
 
-    package course; => Pacote da Classe
+    package course; \\ Pacote da Classe
 
-    public class Triangle { => Nome da Classe
+    public class Triangle { \\ Nome da Classe
     
-    public double a; => Atributos da Classe
-    public double b; => Atributos da Classe
-    public double c; => Atributos da Classe
+    public double a; \\ Atributos da Classe
+    public double b; \\ Atributos da Classe
+    public double c; \\ Atributos da Classe
     // Metodo
-    public => O prefixo "public" indica que o atributo ou método pode ser usado em outros arquivos    
-    double => Tipo do dado que o método retorna (se o método não retorna nada, usa-se a palavra "void")
-    area => Nome do método
-    () => Lista de parâmetros do método
+    public \\ O prefixo "public" indica que o atributo ou método pode ser usado em outros arquivos    
+    double \\ Tipo do dado que o método retorna (se o método não retorna nada, usa-se a palavra "void")
+    area \\ Nome do método
+    () \\ Lista de parâmetros do método
     public double area() {  
         double p = (a + b + c) / 2.0;                                   
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
@@ -622,7 +621,7 @@ operações seguras e que mantenham os objetos em um estado consistente.
 
 Padrão para implementação de getters e setters
 
-# Por convenção a declaração de getters e setters vem depois dos construtores
+### Por convenção a declaração de getters e setters vem depois dos construtores
 
     private String name;
     private double price;
