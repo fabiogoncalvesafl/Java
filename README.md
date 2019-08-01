@@ -186,15 +186,15 @@ fica pendente na stream
 
 - sqrt – raiz quadrada
 ```Java
-    A = Math.sqrt(x); \\Variável A recebe a raiz quadrada de x
+    A = Math.sqrt(x); //Variável A recebe a raiz quadrada de x
 ```
 - pow – potenciação
 ```Java
-    A = Math.pow(x, y); \\ Variável A recebe o resultado de x elevado a y
+    A = Math.pow(x, y); // Variável A recebe o resultado de x elevado a y
 ```
 - abs – valor absoluto
 ```Java
-    A = Math.abs(x); \\ Variável A recebe o valor absoluto de x
+    A = Math.abs(x); // Variável A recebe o valor absoluto de x
 ```
 ### Operadores Lógicos
 
@@ -519,18 +519,18 @@ Quando usar: quando se sabe previamente a quantidade de repetições, ou o inter
 - Classe: é a definição do tipo
 - Objetos: são instâncias da classe
 ```Java
-    package course; \\ Pacote da Classe
+    package course; // Pacote da Classe
 
-    public class Triangle { \\ Nome da Classe
+    public class Triangle { //Nome da Classe
     
-    public double a; \\ Atributos da Classe
-    public double b; \\ Atributos da Classe
-    public double c; \\ Atributos da Classe
+    public double a; // Atributos da Classe
+    public double b; // Atributos da Classe
+    public double c; // Atributos da Classe
     // Metodo
-    public \\ O prefixo "public" indica que o atributo ou método pode ser usado em outros arquivos    
-    double \\ Tipo do dado que o método retorna (se o método não retorna nada, usa-se a palavra "void")
-    area \\ Nome do método
-    () \\ Lista de parâmetros do método
+    public // O prefixo "public" indica que o atributo ou método pode ser usado em outros arquivos    
+    double // Tipo do dado que o método retorna (se o método não retorna nada, usa-se a palavra "void")
+    area // Nome do método
+    () // Lista de parâmetros do método
     public double area() {  
         double p = (a + b + c) / 2.0;                                   
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
@@ -568,7 +568,7 @@ Quais são os benefícios de se calcular a área de um triângulo por meio de um
 - Constante
   - Declaração: 
 ```Java
-    public static final double PI = 3.14159; \\ onde o final indica que é uma constante.
+    public static final double PI = 3.14159; // onde o final indica que é uma constante.
 ```
 - Construtor
   - É uma operação especial da classe, que executa no momento da instanciação do objeto
