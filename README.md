@@ -68,7 +68,7 @@ Dentro da Classe clique:
 - Botão direito -> Source -> Generate Getters and Setters
 - Botão direito -> Source -> Generate toString
 
-# Java - Convenções e Padrões
+# Java - Convenções, Estrutura e Padrões
 
 - Entry Point = Ponto de Entrada = public static void main(String[] args){}
 
