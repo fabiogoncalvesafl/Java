@@ -975,3 +975,18 @@ public String toString() {
     return sb.toString();
 }
 ```
+# Herança
+
+- É um tipo de associação que permite que uma classe herde todos dados e comportamentos de outra
+- Definições importantes
+- Vantagens
+- Reuso
+- Polimorfismo
+- Sintaxe
+- class A extends B
+
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/polimorfismo_1.png)
+
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/polimorfismo_2.png)
+
+![](https://github.com/fabiogoncalvesafl/Java/blob/master/images/polimorfismo_3.png)
