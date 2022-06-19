@@ -17,9 +17,12 @@ public class Program {
 		list.add(2, "Marco");
 		
 		System.out.println(list.size());
+		System.out.println("---------------------");
 		for (String x : list) {
 			System.out.println(x);
 		}
+		//list.remove("Anna");
+		//list.remove(1);
 		System.out.println("---------------------");
 		list.removeIf(x -> x.charAt(0) == 'M');
 		for (String x : list) {
