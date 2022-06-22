@@ -17,6 +17,9 @@ private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:
 	private Client client;
 	private List<OrderItem> items = new ArrayList<>();
 	
+	public Order() {
+	}
+	
 	public Order(Date moment, OrderStatus status, Client client) {
 		this.moment = moment;
 		this.status = status;
